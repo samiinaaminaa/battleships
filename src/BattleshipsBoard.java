@@ -10,6 +10,7 @@
  */
 
 import java.awt.Color;
+import java.awt.Font;
 
 public class BattleshipsBoard extends javax.swing.JFrame {
 
@@ -844,6 +845,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         arrow.setBorder(null);
         arrow.setBorderPainted(false);
         arrow.setContentAreaFilled(false);
+        arrow.setEnabled(false);
         arrow.setFocusPainted(false);
         arrow.setFocusable(false);
         arrow.addActionListener(new java.awt.event.ActionListener() {
@@ -861,101 +863,739 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         getContentPane().add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 815, 260, 46));
 
         backdrop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Base Board.png"))); // NOI18N
-        backdrop.setText("P");
-        getContentPane().add(backdrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        getContentPane().add(backdrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+    
+    String playerPos;
+    
     private void GA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA3ActionPerformed
+        GA3.setBackground(Color.GRAY);
         GA3.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+
+	GA2.setEnabled(false);
+	GA1.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GA3";
     }//GEN-LAST:event_GA3ActionPerformed
 
     private void GA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA1ActionPerformed
-        GA1.setContentAreaFilled(true);      
+        GA1.setBackground(Color.GRAY);
+        GA1.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GA1";
     }//GEN-LAST:event_GA1ActionPerformed
 
     private void GA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA5ActionPerformed
-        // TODO add your handling code here:
+        GA5.setBackground(Color.GRAY);
         GA5.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA1.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GA5";
+
     }//GEN-LAST:event_GA5ActionPerformed
 
     private void GA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA2ActionPerformed
-        // TODO add your handling code here:
+        GA2.setBackground(Color.GRAY);
         GA2.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA1.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GA2";
     }//GEN-LAST:event_GA2ActionPerformed
 
     private void GA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA4ActionPerformed
-        // TODO add your handling code here:
+        GA4.setBackground(Color.GRAY);
         GA4.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA1.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GA4";
     }//GEN-LAST:event_GA4ActionPerformed
 
     private void GB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB4ActionPerformed
+        GB4.setBackground(Color.GRAY);
         GB4.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GA1.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GB4";
     }//GEN-LAST:event_GB4ActionPerformed
 
     private void GB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB1ActionPerformed
+        GB1.setBackground(Color.GRAY);
         GB1.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GA1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GB1";
     }//GEN-LAST:event_GB1ActionPerformed
 
     private void GB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB2ActionPerformed
+        GB2.setBackground(Color.GRAY);
         GB2.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GA1.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GB2";
     }//GEN-LAST:event_GB2ActionPerformed
 
     private void GB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB3ActionPerformed
+        GB3.setBackground(Color.GRAY);
         GB3.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GA1.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GB3";
     }//GEN-LAST:event_GB3ActionPerformed
 
     private void GB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB5ActionPerformed
+        GB5.setBackground(Color.GRAY);
         GB5.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GA1.setEnabled(false);
+	GC1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GB5";
     }//GEN-LAST:event_GB5ActionPerformed
 
     private void GC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC1ActionPerformed
+        GC1.setBackground(Color.GRAY);
         GC1.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GA1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GC1";
     }//GEN-LAST:event_GC1ActionPerformed
 
     private void GC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC2ActionPerformed
+        GC2.setBackground(Color.GRAY);
         GC2.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GC2";
     }//GEN-LAST:event_GC2ActionPerformed
 
     private void GC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC3ActionPerformed
+        GC3.setBackground(Color.GRAY);
         GC3.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC2.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GC3";
     }//GEN-LAST:event_GC3ActionPerformed
 
     private void GC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC4ActionPerformed
+        GC4.setBackground(Color.GRAY);
         GC4.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC2.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GC4";
     }//GEN-LAST:event_GC4ActionPerformed
 
     private void GC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC5ActionPerformed
+        GC5.setBackground(Color.GRAY);
         GC5.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC2.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GC5";
     }//GEN-LAST:event_GC5ActionPerformed
 
     private void GD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD5ActionPerformed
+        GD5.setBackground(Color.GRAY);
         GD5.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GC2.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GD5";
+
     }//GEN-LAST:event_GD5ActionPerformed
 
     private void GD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD4ActionPerformed
+        GD4.setBackground(Color.GRAY);
         GD4.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GC2.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GD4";
     }//GEN-LAST:event_GD4ActionPerformed
 
     private void GD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD3ActionPerformed
+        GD3.setBackground(Color.GRAY);
         GD3.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GC2.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GD3";
     }//GEN-LAST:event_GD3ActionPerformed
 
     private void GD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD2ActionPerformed
+        GD2.setBackground(Color.GRAY);
         GD2.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GC2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GD2";
     }//GEN-LAST:event_GD2ActionPerformed
 
     private void GD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD1ActionPerformed
+        GD1.setBackground(Color.GRAY);
         GD1.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GC2.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GD1";
     }//GEN-LAST:event_GD1ActionPerformed
 
     private void GE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE1ActionPerformed
+        GE1.setBackground(Color.GRAY);
         GE1.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GC2.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GE1";
     }//GEN-LAST:event_GE1ActionPerformed
 
     private void GE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE2ActionPerformed
+        GE2.setBackground(Color.GRAY);
         GE2.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GC2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GE2";
     }//GEN-LAST:event_GE2ActionPerformed
 
     private void TE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE3ActionPerformed
@@ -963,11 +1603,69 @@ public class BattleshipsBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_TE3ActionPerformed
 
     private void GE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE3ActionPerformed
+        GE3.setBackground(Color.GRAY);
         GE3.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+        
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GC2.setEnabled(false);
+	GE4.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GE3";
     }//GEN-LAST:event_GE3ActionPerformed
 
     private void GE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE5ActionPerformed
+        GE5.setBackground(Color.GRAY);
         GE5.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GE4.setEnabled(false);
+	GC2.setEnabled(false);
+
+	playerPos = "GE5";
     }//GEN-LAST:event_GE5ActionPerformed
 
     private void TA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA1ActionPerformed
@@ -1060,7 +1758,36 @@ public class BattleshipsBoard extends javax.swing.JFrame {
     }//GEN-LAST:event_TE2ActionPerformed
 
     private void GE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE4ActionPerformed
+        GE4.setBackground(Color.GRAY);
         GE4.setContentAreaFilled(true);
+        arrow.setEnabled(true);
+
+	GA2.setEnabled(false);
+	GA3.setEnabled(false);
+	GA4.setEnabled(false);
+	GA5.setEnabled(false);
+	GB1.setEnabled(false);
+	GB2.setEnabled(false);
+	GB3.setEnabled(false);
+	GB4.setEnabled(false);
+	GB5.setEnabled(false);
+	GC1.setEnabled(false);
+	GA1.setEnabled(false);
+	GC3.setEnabled(false);
+	GC4.setEnabled(false);
+	GC5.setEnabled(false);
+	GD1.setEnabled(false);
+	GD2.setEnabled(false);
+	GD3.setEnabled(false);
+	GD4.setEnabled(false);
+	GD5.setEnabled(false);
+	GE1.setEnabled(false);
+	GE2.setEnabled(false);
+	GE3.setEnabled(false);
+	GC2.setEnabled(false);
+	GE5.setEnabled(false);
+
+	playerPos = "GE4";
     }//GEN-LAST:event_GE4ActionPerformed
 
     private void TE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE4ActionPerformed
@@ -1078,188 +1805,463 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         
         while(clear == false) {
             String testCoor = cpuFire();
+            System.out.println(playerPos);
             System.out.println(testCoor);
             switch (testCoor) {
                 case "GA1":
-                    if(GA1.getBackground() != Color.white) {   
-                        clear = true;
-                        GA1.setBackground(Color.white);
-                        GA1.setContentAreaFilled(true); 
+                    if(GA1.getBackground() != Color.white) {
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GA1.setBackground(Color.red);
+                            GA1.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GA1.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GA1.setBackground(Color.white);
+                            GA1.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GA2":
                     if(GA2.getBackground() != Color.white) {   
-                        clear = true;
-                        GA2.setBackground(Color.white);
-                        GA2.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GA2.setBackground(Color.red);
+                            GA2.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GA2.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GA2.setBackground(Color.white);
+                            GA2.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GA3":
                     if(GA3.getBackground() != Color.white) {   
-                        clear = true;
-                        GA3.setBackground(Color.white);
-                        GA3.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GA3.setBackground(Color.red);
+                            GA3.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GA3.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GA3.setBackground(Color.white);
+                            GA3.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GA4":
                     if(GA4.getBackground() != Color.white) {   
-                        clear = true;
-                        GA4.setBackground(Color.white);
-                        GA4.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GA4.setBackground(Color.red);
+                            GA4.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GA4.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GA4.setBackground(Color.white);
+                            GA4.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GA5":
                     if(GA5.getBackground() != Color.white) {   
-                        clear = true;
-                        GA5.setBackground(Color.white);
-                        GA5.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GA5.setBackground(Color.red);
+                            GA5.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GA5.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GA5.setBackground(Color.white);
+                            GA5.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GB1":
                     if(GB1.getBackground() != Color.white) {   
-                        clear = true;
-                        GB1.setBackground(Color.white);
-                        GB1.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GB1.setBackground(Color.red);
+                            GB1.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GB1.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GB1.setBackground(Color.white);
+                            GB1.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GB2":
                     if(GB2.getBackground() != Color.white) {   
-                        clear = true;
-                        GB2.setBackground(Color.white);
-                        GB2.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GB2.setBackground(Color.red);
+                            GB2.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GB2.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GB2.setBackground(Color.white);
+                            GB2.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GB3":
                     if(GB3.getBackground() != Color.white) {   
-                        clear = true;
-                        GB3.setBackground(Color.white);
-                        GB3.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GB3.setBackground(Color.red);
+                            GB3.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GB3.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GB3.setBackground(Color.white);
+                            GB3.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GB4":
                     if(GB4.getBackground() != Color.white) {   
-                        clear = true;
-                        GB4.setBackground(Color.white);
-                        GB4.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GB4.setBackground(Color.red);
+                            GB4.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GB4.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GB4.setBackground(Color.white);
+                            GB4.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GB5":
                     if(GB5.getBackground() != Color.white) {   
-                        clear = true;
-                        GB5.setBackground(Color.white);
-                        GB5.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GB5.setBackground(Color.red);
+                            GB5.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GB5.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GB5.setBackground(Color.white);
+                            GB5.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GC1":
                     if(GC1.getBackground() != Color.white) {   
-                        clear = true;
-                        GC1.setBackground(Color.white);
-                        GC1.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GC1.setBackground(Color.red);
+                            GC1.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GC1.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GC1.setBackground(Color.white);
+                            GC1.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GC2":
                     if(GC2.getBackground() != Color.white) {   
-                        clear = true;
-                        GC2.setBackground(Color.white);
-                        GC2.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GC2.setBackground(Color.red);
+                            GC2.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GC2.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GC2.setBackground(Color.white);
+                            GC2.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GC3":
                     if(GC3.getBackground() != Color.white) {   
-                        clear = true;
-                        GC3.setBackground(Color.white);
-                        GC3.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GC3.setBackground(Color.red);
+                            GC3.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GC3.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GC3.setBackground(Color.white);
+                            GC3.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GC4":
                     if(GC4.getBackground() != Color.white) {   
-                        clear = true;
-                        GC4.setBackground(Color.white);
-                        GC4.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GC4.setBackground(Color.red);
+                            GC4.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GC4.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GC4.setBackground(Color.white);
+                            GC4.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GC5":
                     if(GC5.getBackground() != Color.white) {   
-                        clear = true;
-                        GC5.setBackground(Color.white);
-                        GC5.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GC5.setBackground(Color.red);
+                            GC5.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GC5.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GC5.setBackground(Color.white);
+                            GC5.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GD1":
                     if(GD1.getBackground() != Color.white) {   
-                        clear = true;
-                        GD1.setBackground(Color.white);
-                        GD1.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GD1.setBackground(Color.red);
+                            GD1.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GD1.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GD1.setBackground(Color.white);
+                            GD1.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GD2":
                     if(GD2.getBackground() != Color.white) {   
-                        clear = true;
-                        GD2.setBackground(Color.white);
-                        GD2.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GD2.setBackground(Color.red);
+                            GD2.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GD2.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GD2.setBackground(Color.white);
+                            GD2.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GD3":
                     if(GD3.getBackground() != Color.white) {   
-                        clear = true;
-                        GD3.setBackground(Color.white);
-                        GD3.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GD3.setBackground(Color.red);
+                            GD3.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GD3.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GD3.setBackground(Color.white);
+                            GD3.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GD4":
                     if(GD4.getBackground() != Color.white) {   
-                        clear = true;
-                        GD4.setBackground(Color.white);
-                        GD4.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GD4.setBackground(Color.red);
+                            GD4.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GD4.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GD4.setBackground(Color.white);
+                            GD4.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GD5":
                     if(GD5.getBackground() != Color.white) {   
-                        clear = true;
-                        GD5.setBackground(Color.white);
-                        GD5.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GD5.setBackground(Color.red);
+                            GD5.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GD5.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GD5.setBackground(Color.white);
+                            GD5.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GE1":
                     if(GE1.getBackground() != Color.white) {   
-                        clear = true;
-                        GE1.setBackground(Color.white);
-                        GE1.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GE1.setBackground(Color.red);
+                            GE1.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GE1.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GE1.setBackground(Color.white);
+                            GE1.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GE2":
                     if(GE2.getBackground() != Color.white) {   
-                        clear = true;
-                        GE2.setBackground(Color.white);
-                        GE2.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GE2.setBackground(Color.red);
+                            GE2.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GE2.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GE2.setBackground(Color.white);
+                            GE2.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GE3":
                     if(GE3.getBackground() != Color.white) {   
-                        clear = true;
-                        GE3.setBackground(Color.white);
-                        GE3.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GE3.setBackground(Color.red);
+                            GE3.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GE3.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GE3.setBackground(Color.white);
+                            GE3.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GE4":
                     if(GE4.getBackground() != Color.white) {   
-                        clear = true;
-                        GE4.setBackground(Color.white);
-                        GE4.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GE4.setBackground(Color.red);
+                            GE4.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GE4.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GE4.setBackground(Color.white);
+                            GE4.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 case "GE5":
                     if(GE5.getBackground() != Color.white) {   
-                        clear = true;
-                        GE5.setBackground(Color.white);
-                        GE5.setContentAreaFilled(true);
+                        if(playerPos.equals(testCoor)) {
+                            clear = true;
+                            GE5.setBackground(Color.red);
+                            GE5.setContentAreaFilled(true); 
+                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            GE5.setEnabled(false);
+                            arrow.setEnabled(false);
+                        } else {
+                            clear = true;
+                            GE5.setBackground(Color.white);
+                            GE5.setContentAreaFilled(true); 
+                            label.setText("CPU MISSED!");
+                        }
                     }
                     break;
                 default:
                     break;
             }
             
-            label.setText("CPU MISSED!");
         }
     }//GEN-LAST:event_arrowActionPerformed
     
