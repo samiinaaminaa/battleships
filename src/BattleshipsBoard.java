@@ -1,12 +1,13 @@
+
 /**
- * a short description here
- * 
- * modified     20220724
+ * Battleship Game where the player competes against the computer to sink each others ship
+ *
+ * modified     20220725
  * date         20220722
  * @filename    BattleshipsBoard.java
  * @author(s)   Team T1
- * @version     1.0.0
- * @see         N/A
+ * @version     1.4.0
+ * @see N/A
  */
 
 import java.awt.Color;
@@ -20,7 +21,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
     }
 
     @SuppressWarnings("unchecked")
-    
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -845,13 +846,13 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         });
         getContentPane().add(TE5, new org.netbeans.lib.awtextra.AbsoluteConstraints(482, 333, 79, 51));
 
-        arrow.setText("New");
         arrow.setBorder(null);
         arrow.setBorderPainted(false);
         arrow.setContentAreaFilled(false);
         arrow.setEnabled(false);
         arrow.setFocusPainted(false);
         arrow.setFocusable(false);
+        arrow.setLabel("");
         arrow.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 arrowActionPerformed(evt);
@@ -860,8 +861,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         getContentPane().add(arrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 815, 44, 50));
         arrow.getAccessibleContext().setAccessibleName("arrow");
 
-        playAgain.setBackground(new java.awt.Color(255, 51, 0));
-        playAgain.setFont(new java.awt.Font("Impact", 0, 16)); // NOI18N
+        playAgain.setBackground(new java.awt.Color(204, 47, 47));
+        playAgain.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        playAgain.setForeground(new java.awt.Color(0, 0, 0));
         playAgain.setBorder(null);
         playAgain.setBorderPainted(false);
         playAgain.setContentAreaFilled(false);
@@ -875,7 +877,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                 playAgainActionPerformed(evt);
             }
         });
-        getContentPane().add(playAgain, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 397, 140, 17));
+        getContentPane().add(playAgain, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 390, 133, 30));
 
         label.setFont(new java.awt.Font("Impact", 0, 30)); // NOI18N
         label.setForeground(new java.awt.Color(0, 0, 0));
@@ -902,1426 +904,2200 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-    
+
     String playerPos;
     int cpuSalvo;
     int playerSalvo;
     boolean buttonClicked = true;
     String cpuPos = randomCPU();
-            
+
     private void GA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA3ActionPerformed
         GA3.setBackground(Color.GRAY);
         GA3.setContentAreaFilled(true);
-        buttonClicked = false; 
+        buttonClicked = false;
 
-	GA2.setEnabled(false);
-	GA1.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        GA2.setEnabled(false);
+        GA1.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
 
-	playerPos = "GA3";
+        playerPos = "GA3";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GA3ActionPerformed
 
     private void GA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA1ActionPerformed
         GA1.setBackground(Color.GRAY);
         GA1.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GA1";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GA1";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GA1ActionPerformed
 
     private void GA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA5ActionPerformed
         GA5.setBackground(Color.GRAY);
         GA5.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA1.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GA5";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA1.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
 
+        playerPos = "GA5";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GA5ActionPerformed
 
     private void GA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA2ActionPerformed
         GA2.setBackground(Color.GRAY);
         GA2.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA1.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GA2";
+        GA1.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GA2";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GA2ActionPerformed
 
     private void GA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA4ActionPerformed
         GA4.setBackground(Color.GRAY);
         GA4.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA1.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GA4";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA1.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GA4";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GA4ActionPerformed
 
     private void GB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB4ActionPerformed
         GB4.setBackground(Color.GRAY);
         GB4.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GA1.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GB4";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GA1.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GB4";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GB4ActionPerformed
 
     private void GB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB1ActionPerformed
         GB1.setBackground(Color.GRAY);
         GB1.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GA1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GB1";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GA1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GB1";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GB1ActionPerformed
 
     private void GB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB2ActionPerformed
         GB2.setBackground(Color.GRAY);
         GB2.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GA1.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GB2";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GA1.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GB2";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GB2ActionPerformed
 
     private void GB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB3ActionPerformed
         GB3.setBackground(Color.GRAY);
         GB3.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GA1.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GB3";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GA1.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GB3";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GB3ActionPerformed
 
     private void GB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB5ActionPerformed
         GB5.setBackground(Color.GRAY);
         GB5.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GA1.setEnabled(false);
-	GC1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GB5";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GA1.setEnabled(false);
+        GC1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GB5";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GB5ActionPerformed
 
     private void GC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC1ActionPerformed
         GC1.setBackground(Color.GRAY);
         GC1.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GA1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GC1";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GA1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GC1";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GC1ActionPerformed
 
     private void GC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC2ActionPerformed
         GC2.setBackground(Color.GRAY);
         GC2.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GC2";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GC2";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GC2ActionPerformed
 
     private void GC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC3ActionPerformed
         GC3.setBackground(Color.GRAY);
         GC3.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC2.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GC3";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC2.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GC3";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GC3ActionPerformed
 
     private void GC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC4ActionPerformed
         GC4.setBackground(Color.GRAY);
         GC4.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC2.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GC4";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC2.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GC4";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GC4ActionPerformed
 
     private void GC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC5ActionPerformed
         GC5.setBackground(Color.GRAY);
         GC5.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC2.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GC5";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC2.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GC5";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GC5ActionPerformed
 
     private void GD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD5ActionPerformed
         GD5.setBackground(Color.GRAY);
         GD5.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GC2.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GD5";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GC2.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GD5";
+        label.setText("FIRE ON A SECTOR");
 
     }//GEN-LAST:event_GD5ActionPerformed
 
     private void GD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD4ActionPerformed
         GD4.setBackground(Color.GRAY);
         GD4.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GC2.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GD4";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GC2.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GD4";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GD4ActionPerformed
 
     private void GD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD3ActionPerformed
         GD3.setBackground(Color.GRAY);
         GD3.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GC2.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GD3";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GC2.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GD3";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GD3ActionPerformed
 
     private void GD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD2ActionPerformed
         GD2.setBackground(Color.GRAY);
         GD2.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GC2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GD2";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GC2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GD2";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GD2ActionPerformed
 
     private void GD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD1ActionPerformed
         GD1.setBackground(Color.GRAY);
         GD1.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GC2.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GD1";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GC2.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GD1";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GD1ActionPerformed
 
     private void GE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE1ActionPerformed
         GE1.setBackground(Color.GRAY);
         GE1.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GC2.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GE1";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GC2.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GE1";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GE1ActionPerformed
 
     private void GE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE2ActionPerformed
         GE2.setBackground(Color.GRAY);
         GE2.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GC2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GE2";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GC2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GE2";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GE2ActionPerformed
 
     private void TE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE3ActionPerformed
-        TE3.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TE3".equals(cpuPos)) {
+                TE3.setBackground(Color.red);
+                TE3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TE3.setBackground(Color.white);
+                TE3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24));
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TE3.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TE3ActionPerformed
 
     private void GE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE3ActionPerformed
         GE3.setBackground(Color.GRAY);
         GE3.setContentAreaFilled(true);
-        buttonClicked = false; 
-        
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GC2.setEnabled(false);
-	GE4.setEnabled(false);
-	GE5.setEnabled(false);
+        buttonClicked = false;
 
-	playerPos = "GE3";
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GC2.setEnabled(false);
+        GE4.setEnabled(false);
+        GE5.setEnabled(false);
+
+        playerPos = "GE3";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GE3ActionPerformed
 
     private void GE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE5ActionPerformed
         GE5.setBackground(Color.GRAY);
         GE5.setContentAreaFilled(true);
-        buttonClicked = false; 
+        buttonClicked = false;
 
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GE4.setEnabled(false);
-	GC2.setEnabled(false);
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GE4.setEnabled(false);
+        GC2.setEnabled(false);
 
-	playerPos = "GE5";
+        playerPos = "GE5";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GE5ActionPerformed
 
     private void TA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA1ActionPerformed
-        if(buttonClicked != true) {
+        System.out.println(cpuPos);
+        if (buttonClicked != true) {
             if ("TA1".equals(cpuPos)) {
                 TA1.setBackground(Color.red);
                 TA1.setContentAreaFilled(true);
-                label.setFont(new Font("Impact", Font.PLAIN, 20));
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
                 label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
                 arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
             } else {
                 TA1.setBackground(Color.white);
                 TA1.setContentAreaFilled(true);
-                label.setText("YOU MISSED!");
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
                 arrow.setEnabled(true);
             }
-            
+
             TA1.setEnabled(false);
             buttonClicked = true;
-            
+
             playerSalvo++;
             playerSalvoLabel.setText(String.valueOf(playerSalvo));
-            
-            label.setFont(new Font("Impact", Font.PLAIN, 20));
-            label.setText("HIT ARROW TO CHANGE TURN");
-        } 
+        }
     }//GEN-LAST:event_TA1ActionPerformed
 
     private void TA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA2ActionPerformed
-        TA2.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TA2".equals(cpuPos)) {
+                TA2.setBackground(Color.red);
+                TA2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TA2.setBackground(Color.white);
+                TA2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TA2.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TA2ActionPerformed
 
     private void TA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA3ActionPerformed
-        TA3.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TA3".equals(cpuPos)) {
+                TA3.setBackground(Color.red);
+                TA3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TA3.setBackground(Color.white);
+                TA3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TA3.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TA3ActionPerformed
 
     private void TA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA4ActionPerformed
-        TA4.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TA4".equals(cpuPos)) {
+                TA4.setBackground(Color.red);
+                TA4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TA4.setBackground(Color.white);
+                TA4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TA4.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
+
     }//GEN-LAST:event_TA4ActionPerformed
 
     private void TA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA5ActionPerformed
-        TA5.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TA5".equals(cpuPos)) {
+                TA5.setBackground(Color.red);
+                TA5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TA5.setBackground(Color.white);
+                TA5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TA5.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TA5ActionPerformed
 
     private void TB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB1ActionPerformed
-        TB1.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TB1".equals(cpuPos)) {
+                TB1.setBackground(Color.red);
+                TB1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TB1.setBackground(Color.white);
+                TB1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TB1.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TB1ActionPerformed
 
     private void TB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB2ActionPerformed
-        TB2.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TB2".equals(cpuPos)) {
+                TB2.setBackground(Color.red);
+                TB2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TB2.setBackground(Color.white);
+                TB2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TB2.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TB2ActionPerformed
 
     private void TB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB3ActionPerformed
-        TB3.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TB3".equals(cpuPos)) {
+                TB3.setBackground(Color.red);
+                TB3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TB3.setBackground(Color.white);
+                TB3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TB3.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TB3ActionPerformed
 
     private void TB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB4ActionPerformed
-        TB4.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TB4".equals(cpuPos)) {
+                TB4.setBackground(Color.red);
+                TB4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TB4.setBackground(Color.white);
+                TB4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TB4.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TB4ActionPerformed
 
     private void TB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB5ActionPerformed
-        TB5.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TB5".equals(cpuPos)) {
+                TB5.setBackground(Color.red);
+                TB5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TB5.setBackground(Color.white);
+                TB5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TB5.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TB5ActionPerformed
 
     private void TC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC1ActionPerformed
-        TC1.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TC1".equals(cpuPos)) {
+                TC1.setBackground(Color.red);
+                TC1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TC1.setBackground(Color.white);
+                TC1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TC1.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TC1ActionPerformed
 
     private void TC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC2ActionPerformed
-        TC2.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TC2".equals(cpuPos)) {
+                TC2.setBackground(Color.red);
+                TC2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TC2.setBackground(Color.white);
+                TC2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TC2.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TC2ActionPerformed
 
     private void TC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC3ActionPerformed
-        TC3.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TC3".equals(cpuPos)) {
+                TC3.setBackground(Color.red);
+                TC3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TC3.setBackground(Color.white);
+                TC3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TC3.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TC3ActionPerformed
 
     private void TC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC4ActionPerformed
-        TC4.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TC4".equals(cpuPos)) {
+                TC4.setBackground(Color.red);
+                TC4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TC4.setBackground(Color.white);
+                TC4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TC4.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TC4ActionPerformed
 
     private void TC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC5ActionPerformed
-        TC5.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TC5".equals(cpuPos)) {
+                TC5.setBackground(Color.red);
+                TC5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TC5.setBackground(Color.white);
+                TC5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TC5.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TC5ActionPerformed
 
     private void TD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD1ActionPerformed
-        TD1.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TD1".equals(cpuPos)) {
+                TD1.setBackground(Color.red);
+                TD1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TD1.setBackground(Color.white);
+                TD1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TD1.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TD1ActionPerformed
 
     private void TD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD2ActionPerformed
-        TD2.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TD2".equals(cpuPos)) {
+                TD2.setBackground(Color.red);
+                TD2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TD2.setBackground(Color.white);
+                TD2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TD2.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TD2ActionPerformed
 
     private void TD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD3ActionPerformed
-        TD3.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TD3".equals(cpuPos)) {
+                TD3.setBackground(Color.red);
+                TD3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TD3.setBackground(Color.white);
+                TD3.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TD3.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TD3ActionPerformed
 
     private void TD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD4ActionPerformed
-        TD4.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TD4".equals(cpuPos)) {
+                TD4.setBackground(Color.red);
+                TD4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TD4.setBackground(Color.white);
+                TD4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TD4.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TD4ActionPerformed
 
     private void TD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD5ActionPerformed
-        TD5.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TD5".equals(cpuPos)) {
+                TD5.setBackground(Color.red);
+                TD5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TD5.setBackground(Color.white);
+                TD5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TD5.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TD5ActionPerformed
 
     private void TE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE1ActionPerformed
-        TE1.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TE1".equals(cpuPos)) {
+                TE1.setBackground(Color.red);
+                TE1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TE1.setBackground(Color.white);
+                TE1.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TE1.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TE1ActionPerformed
 
     private void TE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE2ActionPerformed
-        TE2.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TE2".equals(cpuPos)) {
+                TE2.setBackground(Color.red);
+                TE2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TE2.setBackground(Color.white);
+                TE2.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TE2.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TE2ActionPerformed
 
     private void GE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE4ActionPerformed
         GE4.setBackground(Color.GRAY);
         GE4.setContentAreaFilled(true);
-         
 
-	GA2.setEnabled(false);
-	GA3.setEnabled(false);
-	GA4.setEnabled(false);
-	GA5.setEnabled(false);
-	GB1.setEnabled(false);
-	GB2.setEnabled(false);
-	GB3.setEnabled(false);
-	GB4.setEnabled(false);
-	GB5.setEnabled(false);
-	GC1.setEnabled(false);
-	GA1.setEnabled(false);
-	GC3.setEnabled(false);
-	GC4.setEnabled(false);
-	GC5.setEnabled(false);
-	GD1.setEnabled(false);
-	GD2.setEnabled(false);
-	GD3.setEnabled(false);
-	GD4.setEnabled(false);
-	GD5.setEnabled(false);
-	GE1.setEnabled(false);
-	GE2.setEnabled(false);
-	GE3.setEnabled(false);
-	GC2.setEnabled(false);
-	GE5.setEnabled(false);
+        GA2.setEnabled(false);
+        GA3.setEnabled(false);
+        GA4.setEnabled(false);
+        GA5.setEnabled(false);
+        GB1.setEnabled(false);
+        GB2.setEnabled(false);
+        GB3.setEnabled(false);
+        GB4.setEnabled(false);
+        GB5.setEnabled(false);
+        GC1.setEnabled(false);
+        GA1.setEnabled(false);
+        GC3.setEnabled(false);
+        GC4.setEnabled(false);
+        GC5.setEnabled(false);
+        GD1.setEnabled(false);
+        GD2.setEnabled(false);
+        GD3.setEnabled(false);
+        GD4.setEnabled(false);
+        GD5.setEnabled(false);
+        GE1.setEnabled(false);
+        GE2.setEnabled(false);
+        GE3.setEnabled(false);
+        GC2.setEnabled(false);
+        GE5.setEnabled(false);
 
-	playerPos = "GE4";
+        playerPos = "GE4";
+        label.setText("FIRE ON A SECTOR");
     }//GEN-LAST:event_GE4ActionPerformed
 
     private void TE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE4ActionPerformed
-        TE4.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TE4".equals(cpuPos)) {
+                TE4.setBackground(Color.red);
+                TE4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TE4.setBackground(Color.white);
+                TE4.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TE4.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TE4ActionPerformed
 
     private void TE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE5ActionPerformed
-        TE5.setContentAreaFilled(true);
+        if (buttonClicked != true) {
+            if ("TE5".equals(cpuPos)) {
+                TE5.setBackground(Color.red);
+                TE5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("ENEMY BATTLESHIP HAS BEEN SUNK");
+                arrow.setEnabled(false);
+
+                playAgain.setText("PLAY AGAIN");
+                playAgain.setContentAreaFilled(true);
+                playAgain.setEnabled(true);
+            } else {
+                TE5.setBackground(Color.white);
+                TE5.setContentAreaFilled(true);
+                label.setFont(new Font("Impact", Font.PLAIN, 24)); label.setText("YOU MISSED!");
+
+                label.setFont(new Font("Impact", Font.PLAIN, 17));
+                label.setText("MISSED! HIT ARROW TO CHANGE TURN");
+                arrow.setEnabled(true);
+            }
+
+            TE5.setEnabled(false);
+            buttonClicked = true;
+
+            playerSalvo++;
+            playerSalvoLabel.setText(String.valueOf(playerSalvo));
+        }
     }//GEN-LAST:event_TE5ActionPerformed
 
     private void arrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arrowActionPerformed
         boolean clear = false;
-        
+
         label.setText("INCOMING FIRE!");
-        
-        while(clear == false) {
+
+        while (clear == false) {
             String testCoor = cpuFire();
             System.out.println(playerPos);
             System.out.println(testCoor);
             switch (testCoor) {
                 case "GA1":
-                    if(GA1.getBackground() != Color.white) {
-                        if(playerPos.equals(testCoor)) {
+                    if (GA1.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GA1.setBackground(Color.red);
-                            GA1.setContentAreaFilled(true); 
+                            GA1.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA1.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GA1.setBackground(Color.white);
-                            GA1.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GA1.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
                             buttonClicked = false;
                         }
                     }
-                                        
+
                     break;
                 case "GA2":
-                    if(GA2.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GA2.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GA2.setBackground(Color.red);
-                            GA2.setContentAreaFilled(true); 
+                            GA2.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK\n WITH " + cpuSalvo + 1);
                             GA2.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GA2.setBackground(Color.white);
-                            GA2.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GA2.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
-                    
-                    
+
                     break;
                 case "GA3":
-                    if(GA3.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GA3.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GA3.setBackground(Color.red);
-                            GA3.setContentAreaFilled(true); 
+                            GA3.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA3.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GA3.setBackground(Color.white);
-                            GA3.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GA3.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GA4":
-                    if(GA4.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GA4.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GA4.setBackground(Color.red);
-                            GA4.setContentAreaFilled(true); 
+                            GA4.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA4.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GA4.setBackground(Color.white);
-                            GA4.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GA4.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GA5":
-                    if(GA5.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GA5.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GA5.setBackground(Color.red);
-                            GA5.setContentAreaFilled(true); 
+                            GA5.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA5.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GA5.setBackground(Color.white);
-                            GA5.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GA5.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GB1":
-                    if(GB1.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GB1.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GB1.setBackground(Color.red);
-                            GB1.setContentAreaFilled(true); 
+                            GB1.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB1.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GB1.setBackground(Color.white);
-                            GB1.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GB1.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GB2":
-                    if(GB2.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GB2.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GB2.setBackground(Color.red);
-                            GB2.setContentAreaFilled(true); 
+                            GB2.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB2.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GB2.setBackground(Color.white);
-                            GB2.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GB2.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GB3":
-                    if(GB3.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GB3.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GB3.setBackground(Color.red);
-                            GB3.setContentAreaFilled(true); 
+                            GB3.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB3.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GB3.setBackground(Color.white);
-                            GB3.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GB3.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GB4":
-                    if(GB4.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GB4.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GB4.setBackground(Color.red);
-                            GB4.setContentAreaFilled(true); 
+                            GB4.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB4.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GB4.setBackground(Color.white);
-                            GB4.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GB4.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GB5":
-                    if(GB5.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GB5.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GB5.setBackground(Color.red);
-                            GB5.setContentAreaFilled(true); 
+                            GB5.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB5.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GB5.setBackground(Color.white);
-                            GB5.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GB5.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GC1":
-                    if(GC1.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GC1.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GC1.setBackground(Color.red);
-                            GC1.setContentAreaFilled(true); 
+                            GC1.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC1.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GC1.setBackground(Color.white);
-                            GC1.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GC1.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GC2":
-                    if(GC2.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GC2.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GC2.setBackground(Color.red);
-                            GC2.setContentAreaFilled(true); 
+                            GC2.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC2.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GC2.setBackground(Color.white);
-                            GC2.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GC2.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GC3":
-                    if(GC3.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GC3.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GC3.setBackground(Color.red);
-                            GC3.setContentAreaFilled(true); 
+                            GC3.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC3.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GC3.setBackground(Color.white);
-                            GC3.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GC3.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GC4":
-                    if(GC4.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GC4.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GC4.setBackground(Color.red);
-                            GC4.setContentAreaFilled(true); 
+                            GC4.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC4.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GC4.setBackground(Color.white);
-                            GC4.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GC4.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GC5":
-                    if(GC5.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GC5.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GC5.setBackground(Color.red);
-                            GC5.setContentAreaFilled(true); 
+                            GC5.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC5.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GC5.setBackground(Color.white);
-                            GC5.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GC5.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GD1":
-                    if(GD1.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GD1.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GD1.setBackground(Color.red);
-                            GD1.setContentAreaFilled(true); 
+                            GD1.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD1.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GD1.setBackground(Color.white);
-                            GD1.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GD1.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GD2":
-                    if(GD2.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GD2.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GD2.setBackground(Color.red);
-                            GD2.setContentAreaFilled(true); 
+                            GD2.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD2.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GD2.setBackground(Color.white);
-                            GD2.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GD2.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GD3":
-                    if(GD3.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GD3.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GD3.setBackground(Color.red);
-                            GD3.setContentAreaFilled(true); 
+                            GD3.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD3.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GD3.setBackground(Color.white);
-                            GD3.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GD3.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GD4":
-                    if(GD4.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GD4.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GD4.setBackground(Color.red);
-                            GD4.setContentAreaFilled(true); 
+                            GD4.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD4.setEnabled(false);
                             arrow.setEnabled(false);
-                            
+
                             playAgain.setText("PLAY AGAIN");
                             playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GD4.setBackground(Color.white);
-                            GD4.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GD4.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GD5":
-                    if(GD5.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GD5.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GD5.setBackground(Color.red);
-                            GD5.setContentAreaFilled(true); 
+                            GD5.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD5.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GD5.setBackground(Color.white);
-                            GD5.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GD5.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GE1":
-                    if(GE1.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GE1.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GE1.setBackground(Color.red);
-                            GE1.setContentAreaFilled(true); 
+                            GE1.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE1.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GE1.setBackground(Color.white);
-                            GE1.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GE1.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GE2":
-                    if(GE2.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GE2.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GE2.setBackground(Color.red);
-                            GE2.setContentAreaFilled(true); 
+                            GE2.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE2.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GE2.setBackground(Color.white);
-                            GE2.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GE2.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GE3":
-                    if(GE3.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GE3.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GE3.setBackground(Color.red);
-                            GE3.setContentAreaFilled(true); 
+                            GE3.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE3.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GE3.setBackground(Color.white);
-                            GE3.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GE3.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GE4":
-                    if(GE4.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GE4.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GE4.setBackground(Color.red);
-                            GE4.setContentAreaFilled(true); 
+                            GE4.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE4.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GE4.setBackground(Color.white);
-                            GE4.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GE4.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
                 case "GE5":
-                    if(GE5.getBackground() != Color.white) {   
-                        if(playerPos.equals(testCoor)) {
+                    if (GE5.getBackground() != Color.white) {
+                        if (playerPos.equals(testCoor)) {
                             clear = true;
                             GE5.setBackground(Color.red);
-                            GE5.setContentAreaFilled(true); 
+                            GE5.setContentAreaFilled(true);
                             label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE5.setEnabled(false);
                             arrow.setEnabled(false);
+
+                            playAgain.setText("PLAY AGAIN");
+                            playAgain.setContentAreaFilled(true);
+                            playAgain.setEnabled(true);
                         } else {
                             clear = true;
                             GE5.setBackground(Color.white);
-                            GE5.setContentAreaFilled(true); 
-                            label.setText("CPU MISSED!");
+                            GE5.setContentAreaFilled(true);
+                            label.setText("CPU MISSED! YOUR TURN AGAIN");
+                            buttonClicked = false;
                         }
                     }
                     break;
@@ -2329,12 +3105,13 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                     break;
             }
         }
-        
+
         cpuSalvo++;
         cpuSalvoLabel.setText(String.valueOf(cpuSalvo));
     }//GEN-LAST:event_arrowActionPerformed
 
     private void playAgainActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_playAgainActionPerformed
+        System.out.println("Play Again");
         /*
         int cpuSalvo = 0;
         int playerSalvo = 0;
@@ -2355,9 +3132,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         
         playAgain.setText("");
         playAgain.setContentAreaFilled(false);
-        */
+         */
     }//GEN-LAST:event_playAgainActionPerformed
-    
+
     private static String randomCPU() {
         int number;
         int letterRand;
@@ -2378,27 +3155,27 @@ public class BattleshipsBoard extends javax.swing.JFrame {
             case 5:
                 letter = 'E';
         }
-        location = letter + String.valueOf(number);
+        location = "T" + letter + String.valueOf(number);
         return location;
 
     }
 
     public static String cpuFire() {
         System.out.println("Enemy is readying to fire! Brace for Impact!");
-        int x = (int)(5 * Math.random() + 1);
-        int fireY = (int)(5 * Math.random() + 1);
-        
+        int x = (int) (5 * Math.random() + 1);
+        int fireY = (int) (5 * Math.random() + 1);
+
         String fireX = numberTranscribe(x);
-        
+
         String firePos = "G" + fireX + String.valueOf(fireY);
-        
+
         return firePos;
     }
-    
+
     public static String numberTranscribe(int num) {
         String letter = "";
-        
-        if(num == 1) {
+
+        if (num == 1) {
             letter = "A";
         } else if (num == 2) {
             letter = "B";
@@ -2408,11 +3185,11 @@ public class BattleshipsBoard extends javax.swing.JFrame {
             letter = "D";
         } else if (num == 5) {
             letter = "E";
-        } 
-        
+        }
+
         return letter;
     }
-           
+
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -2420,7 +3197,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
             }
         });
     }
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton GA1;
     private javax.swing.JButton GA2;
