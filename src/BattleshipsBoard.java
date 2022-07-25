@@ -1,7 +1,7 @@
 /**
  * a short description here
  * 
- * modified     20220723
+ * modified     20220724
  * date         20220722
  * @filename    BattleshipsBoard.java
  * @author(s)   Team T1
@@ -20,7 +20,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 
     @SuppressWarnings("unchecked")
     
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         GA1 = new javax.swing.JButton();
@@ -75,6 +75,8 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         TE5 = new javax.swing.JButton();
         arrow = new javax.swing.JButton();
         label = new javax.swing.JLabel();
+        cpuSalvoLabel = new javax.swing.JLabel();
+        playerSalvoLabel = new javax.swing.JLabel();
         backdrop = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -856,21 +858,36 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         getContentPane().add(arrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(612, 815, 44, 50));
         arrow.getAccessibleContext().setAccessibleName("arrow");
 
-        label.setFont(new java.awt.Font("Consolas", 1, 26)); // NOI18N
+        label.setFont(new java.awt.Font("Impact", 0, 30)); // NOI18N
         label.setForeground(new java.awt.Color(0, 0, 0));
         label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         label.setText("PLACE YOUR SHIP");
         getContentPane().add(label, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 815, 260, 46));
 
+        cpuSalvoLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        cpuSalvoLabel.setForeground(new java.awt.Color(204, 204, 204));
+        cpuSalvoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cpuSalvoLabel.setText("0");
+        cpuSalvoLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(cpuSalvoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(628, 385, 35, 40));
+
+        playerSalvoLabel.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
+        playerSalvoLabel.setForeground(new java.awt.Color(204, 204, 204));
+        playerSalvoLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        playerSalvoLabel.setText("0");
+        playerSalvoLabel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        getContentPane().add(playerSalvoLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(8, 385, 35, 40));
+
         backdrop.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/Base Board.png"))); // NOI18N
         getContentPane().add(backdrop, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, -1));
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
     
     String playerPos;
+    int cpuSalvo;
     
-    private void GA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA3ActionPerformed
+    private void GA3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GA3.setBackground(Color.GRAY);
         GA3.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -901,9 +918,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GA3";
-    }//GEN-LAST:event_GA3ActionPerformed
+    }                                   
 
-    private void GA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA1ActionPerformed
+    private void GA1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GA1.setBackground(Color.GRAY);
         GA1.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -934,9 +951,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GA1";
-    }//GEN-LAST:event_GA1ActionPerformed
+    }                                   
 
-    private void GA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA5ActionPerformed
+    private void GA5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GA5.setBackground(Color.GRAY);
         GA5.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -968,9 +985,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 
 	playerPos = "GA5";
 
-    }//GEN-LAST:event_GA5ActionPerformed
+    }                                   
 
-    private void GA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA2ActionPerformed
+    private void GA2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GA2.setBackground(Color.GRAY);
         GA2.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1001,9 +1018,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GA2";
-    }//GEN-LAST:event_GA2ActionPerformed
+    }                                   
 
-    private void GA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GA4ActionPerformed
+    private void GA4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GA4.setBackground(Color.GRAY);
         GA4.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1034,9 +1051,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GA4";
-    }//GEN-LAST:event_GA4ActionPerformed
+    }                                   
 
-    private void GB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB4ActionPerformed
+    private void GB4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GB4.setBackground(Color.GRAY);
         GB4.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1067,9 +1084,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GB4";
-    }//GEN-LAST:event_GB4ActionPerformed
+    }                                   
 
-    private void GB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB1ActionPerformed
+    private void GB1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GB1.setBackground(Color.GRAY);
         GB1.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1100,9 +1117,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GB1";
-    }//GEN-LAST:event_GB1ActionPerformed
+    }                                   
 
-    private void GB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB2ActionPerformed
+    private void GB2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GB2.setBackground(Color.GRAY);
         GB2.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1133,9 +1150,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GB2";
-    }//GEN-LAST:event_GB2ActionPerformed
+    }                                   
 
-    private void GB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB3ActionPerformed
+    private void GB3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GB3.setBackground(Color.GRAY);
         GB3.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1166,9 +1183,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GB3";
-    }//GEN-LAST:event_GB3ActionPerformed
+    }                                   
 
-    private void GB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GB5ActionPerformed
+    private void GB5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GB5.setBackground(Color.GRAY);
         GB5.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1199,9 +1216,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GB5";
-    }//GEN-LAST:event_GB5ActionPerformed
+    }                                   
 
-    private void GC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC1ActionPerformed
+    private void GC1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GC1.setBackground(Color.GRAY);
         GC1.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1232,9 +1249,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GC1";
-    }//GEN-LAST:event_GC1ActionPerformed
+    }                                   
 
-    private void GC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC2ActionPerformed
+    private void GC2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GC2.setBackground(Color.GRAY);
         GC2.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1265,9 +1282,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GC2";
-    }//GEN-LAST:event_GC2ActionPerformed
+    }                                   
 
-    private void GC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC3ActionPerformed
+    private void GC3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GC3.setBackground(Color.GRAY);
         GC3.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1298,9 +1315,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GC3";
-    }//GEN-LAST:event_GC3ActionPerformed
+    }                                   
 
-    private void GC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC4ActionPerformed
+    private void GC4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GC4.setBackground(Color.GRAY);
         GC4.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1331,9 +1348,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GC4";
-    }//GEN-LAST:event_GC4ActionPerformed
+    }                                   
 
-    private void GC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GC5ActionPerformed
+    private void GC5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GC5.setBackground(Color.GRAY);
         GC5.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1364,9 +1381,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GC5";
-    }//GEN-LAST:event_GC5ActionPerformed
+    }                                   
 
-    private void GD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD5ActionPerformed
+    private void GD5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GD5.setBackground(Color.GRAY);
         GD5.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1398,9 +1415,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 
 	playerPos = "GD5";
 
-    }//GEN-LAST:event_GD5ActionPerformed
+    }                                   
 
-    private void GD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD4ActionPerformed
+    private void GD4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GD4.setBackground(Color.GRAY);
         GD4.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1431,9 +1448,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GD4";
-    }//GEN-LAST:event_GD4ActionPerformed
+    }                                   
 
-    private void GD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD3ActionPerformed
+    private void GD3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GD3.setBackground(Color.GRAY);
         GD3.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1464,9 +1481,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GD3";
-    }//GEN-LAST:event_GD3ActionPerformed
+    }                                   
 
-    private void GD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD2ActionPerformed
+    private void GD2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GD2.setBackground(Color.GRAY);
         GD2.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1497,9 +1514,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GD2";
-    }//GEN-LAST:event_GD2ActionPerformed
+    }                                   
 
-    private void GD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GD1ActionPerformed
+    private void GD1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GD1.setBackground(Color.GRAY);
         GD1.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1530,9 +1547,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GD1";
-    }//GEN-LAST:event_GD1ActionPerformed
+    }                                   
 
-    private void GE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE1ActionPerformed
+    private void GE1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GE1.setBackground(Color.GRAY);
         GE1.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1563,9 +1580,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GE1";
-    }//GEN-LAST:event_GE1ActionPerformed
+    }                                   
 
-    private void GE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE2ActionPerformed
+    private void GE2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GE2.setBackground(Color.GRAY);
         GE2.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1596,13 +1613,13 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GE2";
-    }//GEN-LAST:event_GE2ActionPerformed
+    }                                   
 
-    private void TE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE3ActionPerformed
+    private void TE3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TE3.setContentAreaFilled(true);
-    }//GEN-LAST:event_TE3ActionPerformed
+    }                                   
 
-    private void GE3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE3ActionPerformed
+    private void GE3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GE3.setBackground(Color.GRAY);
         GE3.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1633,9 +1650,9 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GE3";
-    }//GEN-LAST:event_GE3ActionPerformed
+    }                                   
 
-    private void GE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE5ActionPerformed
+    private void GE5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GE5.setBackground(Color.GRAY);
         GE5.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1666,98 +1683,98 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GC2.setEnabled(false);
 
 	playerPos = "GE5";
-    }//GEN-LAST:event_GE5ActionPerformed
+    }                                   
 
-    private void TA1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA1ActionPerformed
+    private void TA1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TA1.setContentAreaFilled(true);
         
-    }//GEN-LAST:event_TA1ActionPerformed
+    }                                   
 
-    private void TA2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA2ActionPerformed
+    private void TA2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TA2.setContentAreaFilled(true);
-    }//GEN-LAST:event_TA2ActionPerformed
+    }                                   
 
-    private void TA3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA3ActionPerformed
+    private void TA3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TA3.setContentAreaFilled(true);
-    }//GEN-LAST:event_TA3ActionPerformed
+    }                                   
 
-    private void TA4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA4ActionPerformed
+    private void TA4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TA4.setContentAreaFilled(true);
-    }//GEN-LAST:event_TA4ActionPerformed
+    }                                   
 
-    private void TA5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TA5ActionPerformed
+    private void TA5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TA5.setContentAreaFilled(true);
-    }//GEN-LAST:event_TA5ActionPerformed
+    }                                   
 
-    private void TB1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB1ActionPerformed
+    private void TB1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TB1.setContentAreaFilled(true);
-    }//GEN-LAST:event_TB1ActionPerformed
+    }                                   
 
-    private void TB2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB2ActionPerformed
+    private void TB2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TB2.setContentAreaFilled(true);
-    }//GEN-LAST:event_TB2ActionPerformed
+    }                                   
 
-    private void TB3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB3ActionPerformed
+    private void TB3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TB3.setContentAreaFilled(true);
-    }//GEN-LAST:event_TB3ActionPerformed
+    }                                   
 
-    private void TB4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB4ActionPerformed
+    private void TB4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TB4.setContentAreaFilled(true);
-    }//GEN-LAST:event_TB4ActionPerformed
+    }                                   
 
-    private void TB5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TB5ActionPerformed
+    private void TB5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TB5.setContentAreaFilled(true);
-    }//GEN-LAST:event_TB5ActionPerformed
+    }                                   
 
-    private void TC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC1ActionPerformed
+    private void TC1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TC1.setContentAreaFilled(true);
-    }//GEN-LAST:event_TC1ActionPerformed
+    }                                   
 
-    private void TC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC2ActionPerformed
+    private void TC2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TC2.setContentAreaFilled(true);
-    }//GEN-LAST:event_TC2ActionPerformed
+    }                                   
 
-    private void TC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC3ActionPerformed
+    private void TC3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TC3.setContentAreaFilled(true);
-    }//GEN-LAST:event_TC3ActionPerformed
+    }                                   
 
-    private void TC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC4ActionPerformed
+    private void TC4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TC4.setContentAreaFilled(true);
-    }//GEN-LAST:event_TC4ActionPerformed
+    }                                   
 
-    private void TC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TC5ActionPerformed
+    private void TC5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TC5.setContentAreaFilled(true);
-    }//GEN-LAST:event_TC5ActionPerformed
+    }                                   
 
-    private void TD1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD1ActionPerformed
+    private void TD1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TD1.setContentAreaFilled(true);
-    }//GEN-LAST:event_TD1ActionPerformed
+    }                                   
 
-    private void TD2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD2ActionPerformed
+    private void TD2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TD2.setContentAreaFilled(true);
-    }//GEN-LAST:event_TD2ActionPerformed
+    }                                   
 
-    private void TD3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD3ActionPerformed
+    private void TD3ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TD3.setContentAreaFilled(true);
-    }//GEN-LAST:event_TD3ActionPerformed
+    }                                   
 
-    private void TD4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD4ActionPerformed
+    private void TD4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TD4.setContentAreaFilled(true);
-    }//GEN-LAST:event_TD4ActionPerformed
+    }                                   
 
-    private void TD5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TD5ActionPerformed
+    private void TD5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TD5.setContentAreaFilled(true);
-    }//GEN-LAST:event_TD5ActionPerformed
+    }                                   
 
-    private void TE1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE1ActionPerformed
+    private void TE1ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TE1.setContentAreaFilled(true);
-    }//GEN-LAST:event_TE1ActionPerformed
+    }                                   
 
-    private void TE2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE2ActionPerformed
+    private void TE2ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TE2.setContentAreaFilled(true);
-    }//GEN-LAST:event_TE2ActionPerformed
+    }                                   
 
-    private void GE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GE4ActionPerformed
+    private void GE4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         GE4.setBackground(Color.GRAY);
         GE4.setContentAreaFilled(true);
         arrow.setEnabled(true);
@@ -1788,17 +1805,17 @@ public class BattleshipsBoard extends javax.swing.JFrame {
 	GE5.setEnabled(false);
 
 	playerPos = "GE4";
-    }//GEN-LAST:event_GE4ActionPerformed
+    }                                   
 
-    private void TE4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE4ActionPerformed
+    private void TE4ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TE4.setContentAreaFilled(true);
-    }//GEN-LAST:event_TE4ActionPerformed
+    }                                   
 
-    private void TE5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TE5ActionPerformed
+    private void TE5ActionPerformed(java.awt.event.ActionEvent evt) {                                    
         TE5.setContentAreaFilled(true);
-    }//GEN-LAST:event_TE5ActionPerformed
+    }                                   
 
-    private void arrowActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arrowActionPerformed
+    private void arrowActionPerformed(java.awt.event.ActionEvent evt) {                                      
         boolean clear = false;
         
         label.setText("INCOMING FIRE!");
@@ -1814,7 +1831,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GA1.setBackground(Color.red);
                             GA1.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA1.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1825,6 +1842,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             label.setText("CPU MISSED!");
                         }
                     }
+                                        
                     break;
                 case "GA2":
                     if(GA2.getBackground() != Color.white) {   
@@ -1832,8 +1850,8 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GA2.setBackground(Color.red);
                             GA2.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
-                            label.setText("BATTLESHIP HAS BEEN SUNK");
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
+                            label.setText("BATTLESHIP HAS BEEN SUNK\n WITH " + cpuSalvo + 1);
                             GA2.setEnabled(false);
                             arrow.setEnabled(false);
                         } else {
@@ -1843,6 +1861,8 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             label.setText("CPU MISSED!");
                         }
                     }
+                    
+                    
                     break;
                 case "GA3":
                     if(GA3.getBackground() != Color.white) {   
@@ -1850,7 +1870,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GA3.setBackground(Color.red);
                             GA3.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA3.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1868,7 +1888,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GA4.setBackground(Color.red);
                             GA4.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA4.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1886,7 +1906,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GA5.setBackground(Color.red);
                             GA5.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GA5.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1904,7 +1924,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GB1.setBackground(Color.red);
                             GB1.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB1.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1922,7 +1942,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GB2.setBackground(Color.red);
                             GB2.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB2.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1940,7 +1960,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GB3.setBackground(Color.red);
                             GB3.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB3.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1958,7 +1978,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GB4.setBackground(Color.red);
                             GB4.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB4.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1976,7 +1996,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GB5.setBackground(Color.red);
                             GB5.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GB5.setEnabled(false);
                             arrow.setEnabled(false);
@@ -1994,7 +2014,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GC1.setBackground(Color.red);
                             GC1.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC1.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2012,7 +2032,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GC2.setBackground(Color.red);
                             GC2.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC2.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2030,7 +2050,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GC3.setBackground(Color.red);
                             GC3.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC3.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2048,7 +2068,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GC4.setBackground(Color.red);
                             GC4.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC4.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2066,7 +2086,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GC5.setBackground(Color.red);
                             GC5.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GC5.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2084,7 +2104,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GD1.setBackground(Color.red);
                             GD1.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD1.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2102,7 +2122,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GD2.setBackground(Color.red);
                             GD2.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD2.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2120,7 +2140,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GD3.setBackground(Color.red);
                             GD3.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD3.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2138,7 +2158,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GD4.setBackground(Color.red);
                             GD4.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD4.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2156,7 +2176,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GD5.setBackground(Color.red);
                             GD5.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GD5.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2174,7 +2194,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GE1.setBackground(Color.red);
                             GE1.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE1.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2192,7 +2212,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GE2.setBackground(Color.red);
                             GE2.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE2.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2210,7 +2230,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GE3.setBackground(Color.red);
                             GE3.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE3.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2228,7 +2248,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GE4.setBackground(Color.red);
                             GE4.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE4.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2246,7 +2266,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                             clear = true;
                             GE5.setBackground(Color.red);
                             GE5.setContentAreaFilled(true); 
-                            label.setFont(new Font("Consolas", Font.BOLD, 18));
+                            label.setFont(new Font("Impact", Font.PLAIN, 24));
                             label.setText("BATTLESHIP HAS BEEN SUNK");
                             GE5.setEnabled(false);
                             arrow.setEnabled(false);
@@ -2261,9 +2281,11 @@ public class BattleshipsBoard extends javax.swing.JFrame {
                 default:
                     break;
             }
-            
         }
-    }//GEN-LAST:event_arrowActionPerformed
+        
+        cpuSalvo++;
+        cpuSalvoLabel.setText(String.valueOf(cpuSalvo));
+    }                                     
     
     public static String cpuFire() {
         System.out.println("Enemy is readying to fire! Brace for Impact!");
@@ -2303,7 +2325,7 @@ public class BattleshipsBoard extends javax.swing.JFrame {
         });
     }
     
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton GA1;
     private javax.swing.JButton GA2;
     private javax.swing.JButton GA3;
@@ -2356,6 +2378,8 @@ public class BattleshipsBoard extends javax.swing.JFrame {
     private javax.swing.JButton TE5;
     private javax.swing.JButton arrow;
     private javax.swing.JLabel backdrop;
+    private javax.swing.JLabel cpuSalvoLabel;
     private javax.swing.JLabel label;
-    // End of variables declaration//GEN-END:variables
+    private javax.swing.JLabel playerSalvoLabel;
+    // End of variables declaration                   
 }
